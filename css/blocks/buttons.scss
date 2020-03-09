@@ -1,0 +1,14 @@
+.btn {
+    text-transform: uppercase;
+    border-radius: 5px;
+    @include ubuntu ($style: medium);
+    font-size: 13px;
+    display: inline-block;
+    padding: 10px 15px;
+    
+}
+
+.order_btn {
+    background: $orange;
+    margin-left: 15px;
+}

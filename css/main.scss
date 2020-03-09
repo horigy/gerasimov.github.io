@@ -1,0 +1,21 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//normalise
+@import "/css/layouts/normalize.scss";
+
+//setups
+@import "/css/layouts/layout.scss";
+@import "/css/layouts/fonts.scss";
+
+//blocks
+@import "/css/blocks/header.scss";
+@import "/css/blocks/hero.scss";
+@import "/css/blocks/buttons.scss";
+@import "/css/blocks/section.scss";
+@import "/css/blocks/scroll-down.scss";
+@import "/css/blocks/features.scss";
+@import "/css/blocks/reviews.scss";

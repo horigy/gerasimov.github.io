@@ -1,0 +1,33 @@
+.features {
+    background: url('../../img/pages_background/features_bg.jpg') center center / cover no-repeat;
+}
+
+.features_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features_item {
+    width: calc(100% / 3 - 26px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.features_image {
+    display: flex;
+    justify-content: center;
+}
+
+.features_title {
+    @include lifehack ();
+    font-size: 24px;
+    color: $black;
+}
+
+.features_content {
+    @include ubuntu ($style: light);
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+}
