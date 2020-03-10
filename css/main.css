@@ -70,8 +70,7 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -267,9 +266,9 @@ select {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+html [type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
   /* 2 */
 }
@@ -278,9 +277,9 @@ html [type="button"],
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -289,9 +288,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -309,8 +308,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -346,10 +344,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -358,8 +355,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -367,7 +364,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -377,8 +374,8 @@ textarea {
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -435,4 +432,346 @@ template {
 [hidden] {
   display: none;
 }
-/*# sourceMappingURL=normalize.css.map */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  color: black;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Gagalin-Regular";
+  src: url("../../fonts/Gagalin-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lifehack-Medium";
+  src: url("../../fonts/Lifehack-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../fonts/Ubuntu-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../fonts/Ubuntu-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../../fonts/Ubuntu-B.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.header_menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu_list {
+  display: flex;
+  align-items: center;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+}
+.menu_item:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-left: 13px;
+}
+.menu_item:first-child:before {
+  display: none;
+}
+
+.menu_link {
+  margin-left: 13px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 2.31;
+}
+
+.hero {
+  background: url("../../img/pages_background/hero.jpg") center center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero_desc {
+  font-size: 65px;
+  font-family: "Lifehack-Medium";
+  line-height: 1.1;
+}
+
+.hero_text {
+  width: 50%;
+  padding-top: 94px;
+  margin-left: 11px;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.order_btn {
+  background: #e45028;
+  margin-left: 15px;
+}
+.order_btn:hover {
+  background: #c1401e;
+}
+
+.review_btn {
+  background: #2f3234;
+  margin-top: 17px;
+}
+.review_btn:hover {
+  background: #1f2122;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  min-height: 650px;
+}
+
+.section_title {
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 72px;
+  margin-bottom: 50px;
+  line-height: 1;
+}
+
+.hero_title {
+  color: #f9b43b;
+  line-height: 85px;
+}
+
+.features_title {
+  color: #2f3234;
+  display: flex;
+  justify-content: center;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features {
+  background: url("../../img/pages_background/features_bg.jpg") center center/cover no-repeat;
+}
+
+.features_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features_item {
+  width: calc(100% / 3 - 26px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature_image {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+.feature_title {
+  font-family: "Lifehack-Medium";
+  font-size: 24px;
+  margin-bottom: 13px;
+  color: #2f3234;
+}
+
+.feature_content {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(47, 50, 52, 0.8);
+}
+
+.reviews {
+  background: black;
+  height: 100vh;
+  min-height: 650px;
+}
+
+.reviews_list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.review_item {
+  width: 25%;
+  height: 50%;
+  position: relative;
+  color: #fff;
+}
+.review_item:hover .review_hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.review_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.review_avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.review_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 1s;
+}
+
+.review_username {
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.review_text {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2;
+}

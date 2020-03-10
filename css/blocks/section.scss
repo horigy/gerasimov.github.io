@@ -18,11 +18,14 @@
 }
 
 .hero_title {
-    color: $orange;
+    color: $yellow;
+    line-height: 85px;
 }
 
 .features_title {
     color: $black;
+    display: flex;
+    justify-content: center;
 }
 
 

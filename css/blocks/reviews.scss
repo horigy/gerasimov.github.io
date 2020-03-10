@@ -2,15 +2,69 @@
     background: black;
     height: 100vh;
     min-height: 650px;
-  }
+}
   
-  .reviews_list {
+.reviews_list {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-  }
+}
   
-  .review_item {
+.review_item {
     width: 25%;
     height: 50%;
-  }
+    position: relative;
+    color: #fff;
+
+    &:hover {
+      .review_hover {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+}
+
+.review_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.review_avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.review_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform: scale(.8);
+    opacity: 0;
+    transition: 1s;
+}
+
+.review_username {
+  @include gagalin ();
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.review_text {
+  @include ubuntu ($style: light);
+  font-size: 14px;
+  line-height: 2;
+
+}
+

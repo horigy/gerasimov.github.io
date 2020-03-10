@@ -10,10 +10,10 @@
     height: 100%;
 }
 
-.hero__content {
+.hero_content {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    flex: .8;
 }
 
 .hero_desc {
@@ -22,7 +22,8 @@
     line-height: 1.1;
 }
   
-.hero__text {
+.hero_text {
     width: 50%;
     padding-top: 94px;
+    margin-left: 11px;
 }
