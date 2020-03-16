@@ -1,0 +1,119 @@
+.order {
+    background: url(../../img/pages_background/form_bg.png);
+    color: #ffffff;
+}
+
+.order_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order_form {
+    display: flex;
+    flex-direction: row;
+}
+.order_form-right, .order_form-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.order_row {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+}
+
+.order_block {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+.order_name {
+    @include ubuntu ();
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.order_input {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    border: solid 1px #d1cfcb;
+    border-radius: 5px;
+}
+
+.input_textarea {
+    height: 120px;
+    resize: none;
+}
+
+.order_radio {
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.order_name_radio {
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-bottom: -3px;
+        margin-right: 10px;
+        background-image: url(../../img/icons/form_icons/radio_empty.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 50%;
+    }
+}
+
+.radio_btn {
+    display: none;
+    &:checked + .order_name_radio:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-bottom: -3px;
+            margin-right: 10px;
+            background: url(../../img/icons/form_icons/radio_checked.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+        }
+    
+}
+
+.order_checkbox {
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-bottom: -3px;
+        margin-right: 10px;
+        background: url(../../img/icons/form_icons/Rectangle_empty.png) center center no-repeat;
+    }
+}
+
+.nocall_btn {
+    display: none;
+    &:checked + .order_checkbox:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-bottom: -3px;
+            margin-right: 10px;
+            background: url(../../img/icons/form_icons/rectangle_checked.png) center center no-repeat;
+        }
+}

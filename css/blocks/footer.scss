@@ -1,0 +1,38 @@
+.footer {
+	background: url('../../img/pages_background/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png') center bottom no-repeat;
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+	color: #ffffff;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer_info {
+	width: 50%;
+}
+
+.footer_contacts {
+	justify-content: flex-start;
+}
+
+.adress {
+	@include ubuntu ();
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+}
+.phone {
+	@include ubuntu ();
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 24px;
+	color: $orange;
+}

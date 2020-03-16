@@ -6,10 +6,6 @@
     min-height: 650px;
 }
 
-// &--align--top {
-//     justify-content: flex-start;
-//   }
-
 .section_title {
     @include gagalin();
     font-size: 72px; 
@@ -28,10 +24,19 @@
     justify-content: center;
 }
 
+.order_title {
+    @include gagalin();
+    font-size: 72px;
+    color: $yellow; 
+    display: flex;
+    justify-content: center;
+}
 
-//  &--centered {
-//     text-align: center;
-//   }
+.team_title {
+    @include gagalin();
+    font-size: 72px;
+    color: $yellow; 
+    display: flex;
+    justify-content: center;
+}
 
-//   &--color--black {
-//     color: $black;
