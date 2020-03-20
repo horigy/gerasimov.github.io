@@ -12,16 +12,25 @@
 .order_form {
     display: flex;
     flex-direction: row;
+    margin-top: rem(20px);
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15%;
+    }
 }
 .order_form-right, .order_form-left {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-right: 20px;
+    margin-right: rem(20px);
+    @include tablets {
+        width: 95%;
+    }
 }
 
 .order_row {
-    margin-bottom: 14px;
+    margin-bottom: rem(14px);
     display: flex;
     flex-direction: row;
 }
@@ -30,7 +39,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
   
     &:last-child {
       margin-right: 0;
@@ -40,35 +49,35 @@
 .order_name {
     @include ubuntu ();
     font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: rem(14px);
+    line-height: 1.8;
 }
 
 .order_input {
     display: flex;
     width: 100%;
-    padding: 10px 20px;
-    border: solid 1px #d1cfcb;
-    border-radius: 5px;
+    padding: rem(10px) rem(20px);
+    border: solid rem(1px) #d1cfcb;
+    border-radius: rem(5px);
 }
 
 .input_textarea {
-    height: 120px;
+    height: rem(120px);
     resize: none;
 }
 
 .order_radio {
-    margin-bottom: 10px;
-    margin-right: 20px;
+    margin-bottom: rem(10px);
+    margin-right: rem(20px);
 }
 .order_name_radio {
     &:before {
         content: "";
         display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin-bottom: -3px;
-        margin-right: 10px;
+        width: rem(16px);
+        height: rem(16px);
+        margin-bottom: rem(-3px);
+        margin-right: rem(10px);
         background-image: url(../../img/icons/form_icons/radio_empty.png);
         background-repeat: no-repeat;
         background-position: center center;
@@ -81,10 +90,10 @@
     &:checked + .order_name_radio:before {
             content: "";
             display: inline-block;
-            width: 16px;
-            height: 16px;
-            margin-bottom: -3px;
-            margin-right: 10px;
+            width: rem(16px);
+            height: rem(16px);
+            margin-bottom: rem(-3px);
+            margin-right: rem(10px);
             background: url(../../img/icons/form_icons/radio_checked.png);
             background-repeat: no-repeat;
             background-position: center center;
@@ -97,10 +106,10 @@
     &:before {
         content: "";
         display: inline-block;
-        width: 16px;
-        height: 16px;
-        margin-bottom: -3px;
-        margin-right: 10px;
+        width: rem(16px);
+        height: rem(16px);
+        margin-bottom: rem(-3px);
+        margin-right: rem(10px);
         background: url(../../img/icons/form_icons/Rectangle_empty.png) center center no-repeat;
     }
 }
@@ -110,10 +119,10 @@
     &:checked + .order_checkbox:before {
             content: "";
             display: inline-block;
-            width: 16px;
-            height: 16px;
-            margin-bottom: -3px;
-            margin-right: 10px;
+            width: rem(16px);
+            height: rem(16px);
+            margin-bottom: rem(-3px);
+            margin-right: rem(10px);
             background: url(../../img/icons/form_icons/rectangle_checked.png) center center no-repeat;
         }
 }

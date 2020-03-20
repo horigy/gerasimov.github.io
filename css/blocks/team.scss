@@ -13,42 +13,62 @@
     bottom: 0;
     opacity: 0.93;
     background: #323436;
-    padding: 90px 90px;
+    padding: rem(100px) rem(100px) rem(0px) rem(100px);
+    @include tablets {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0;
+    }
 }
 
 .team_list {
-    margin-left: 20px;
+    margin-left: rem(20px);
+    margin-top: rem(20px);
     display: flex;
     flex-direction: column;
+    @include tablets {
+        padding-top: rem(40px);
+        margin: 0 0;
+        width: auto;
+        text-align: center;
+        padding: 0 20%;
+    }
 }
 
 .team_name {
     @include gagalin ();
-    font-size: 14px;
+    font-size: rem(14px);
     color: #ffffff;
     position: relative;
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: rem(20px);
     &::before {
         content: "";
 		display: block;
 		position: absolute;
-		left: -18px;
-		top: 8px;
+		left: rem(-18px);
+		top: rem(8px);
 		width: 0;
         height: 0;
-        border-top: 7px solid $yellow;
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-		border-bottom: 0px solid transparent;
+        border-top: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-bottom: rem(0px) solid transparent;
 		transform: rotate(0deg);
 		transition: .3s;
+    }
+    @include tablets {
+        display: inline-flex;
     }
 }
 
 .team_content {
     display: none;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+    @include tablets {
+        padding: 0 10%;
+    }
 }
 
 .team_name_active {
@@ -58,21 +78,30 @@
     }
     & + .team_content {
         display: flex;
+        @include tablets {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
 }
 
 .team_item{
-    margin-bottom: 20px;
+    margin-bottom: rem(10px);
 }
 
 .team_avatar {
-    margin-right: 20px;
+    margin-right: rem(20px);
+    @include tablets {
+        display: inline-flex;
+        justify-content: center;
+        margin-right: 0;
+    }
 }
 
 .team_text {
     @include ubuntu ();
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.71;
     font-weight: 300;
     color: #ffffff;
@@ -80,5 +109,5 @@
 
 .team_position {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }

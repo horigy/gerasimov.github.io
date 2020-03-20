@@ -1,7 +1,6 @@
 .reviews {
     background: black;
     height: 100vh;
-    min-height: 650px;
 }
   
 .reviews_list {
@@ -21,6 +20,10 @@
         opacity: 1;
         transform: scale(1);
       }
+    }
+    @include tablets {
+      width: 50%;
+      height: 25%;
     }
 }
 
@@ -46,25 +49,39 @@
     left: 0;
     right: 0; 
     bottom: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: rem(20px);
+    padding-right: rem(20px);
     transform: scale(.8);
     opacity: 0;
     transition: 1s;
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 6%;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
 }
 
 .review_username {
   @include gagalin ();
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 2;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: rem(40px);
+  margin-bottom: rem(10px);
+  @include tablets {
+    margin-top: 0;
+    margin-bottom: rem(10px);
+  }
 }
 
 .review_text {
   @include ubuntu ($style: light);
-  font-size: 14px;
-  line-height: 2;
+  font-size: rem(14px);
+  line-height: 1.8;
+  margin-bottom: rem(-4px);
 
 }
 

@@ -1,16 +1,16 @@
 .btn {
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: rem(5px);
     @include ubuntu ($style: medium);
-    font-size: 13px;
+    font-size: rem(14px);
     display: inline-block;
-    padding: 10px 15px;
+    text-align: center;
+    padding: rem(10px) rem(15px);
 
 }
 
 .order_btn {
     background: $orange;
-    margin-left: 15px;
     &:hover {
         background: #c1401e;
     }
@@ -25,14 +25,18 @@
     @include ubuntu ();
     font-weight: 300;
     text-transform: none;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: rem(14px);
+    line-height: 1.8;
 }
 
 .review_btn {
     background: $black;
-    margin-top: 17px;
+    margin-top: rem(17px);
     &:hover {
         background: #1f2122;
     }
+    // @include tablets {
+    //     display: inline-flex;
+    //     justify-content: center;
+    // }
 }

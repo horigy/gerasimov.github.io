@@ -8,8 +8,10 @@ $red: #e35028;
 @import "./layouts/normalize.scss";
 
 //setups
+@import "./layouts/media.scss";
 @import "./layouts/layout.scss";
 @import "./layouts/fonts.scss";
+
 
 //blocks
 @import "./blocks/header.scss";
@@ -24,5 +26,9 @@ $red: #e35028;
 @import "./blocks/form.scss";
 @import "./blocks/map.scss";
 @import "./blocks/footer.scss";
+@import "./blocks/fixed-menu.scss";
+@import "./blocks/hamburger.scss";
+
+
 
 

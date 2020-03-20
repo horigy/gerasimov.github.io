@@ -1,28 +1,38 @@
+
+
 html,
 body {
   height: 100%;
+  font-size: rem(16px);
+  line-height: 1.42;
+}
+
+html {
+    @include tablets {
+      font-size: rem(15px);
+    }
+    @include phones {
+      font-size: rem(13px);
+    }
 }
 
 body {
-  font-size: 16px;
-  line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  // @include ubuntu(); 
   color: black;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  max-width: rem(940px);
+  width: 95%;
   margin: 0 auto;
 }
 
