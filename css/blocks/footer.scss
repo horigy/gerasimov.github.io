@@ -8,6 +8,9 @@
 	padding: rem(10px) 5%;
 	height: rem(70px);
 	color: #ffffff;
+	@include phones {
+		height: rem(140px);
+	}
 }
 
 .footer_container {
@@ -30,6 +33,8 @@
 	justify-content: flex-start;
 	@include phones {
 		justify-content: center;
+		text-align: center;
+		margin-bottom: rem(14px);
 	}
 }
 
@@ -38,6 +43,9 @@
 	font-weight: 300;
 	font-size: rem(14px);
 	line-height: 1.8;
+	@include phones {
+		font-size: rem(20px);
+	}
 }
 .phone {
 	@include ubuntu ();
@@ -45,6 +53,9 @@
 	font-size: rem(14px);
 	line-height: 1.8;
 	color: $orange;
+	@include phones {
+		font-size: rem(20px);
+	}
 }
 
 .socials_list {

@@ -46,5 +46,12 @@
     font-size: rem(14px);
 }
 
+.header_links {
+  @include tablets{
+    margin-right: rem(10px);
+    margin-bottom: rem(5px);
+  }
+}
+
 
 

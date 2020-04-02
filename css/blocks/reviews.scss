@@ -1,6 +1,7 @@
 .reviews {
     background: black;
     height: 100vh;
+    position: relative;
 }
   
 .reviews_list {
@@ -58,7 +59,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 6%;
+      padding: 0 15%;
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -72,7 +73,7 @@
   margin-top: rem(40px);
   margin-bottom: rem(10px);
   @include tablets {
-    margin-top: 0;
+    margin-top: rem(10px);
     margin-bottom: rem(10px);
   }
 }
@@ -82,6 +83,54 @@
   font-size: rem(14px);
   line-height: 1.8;
   margin-bottom: rem(-4px);
-
 }
 
+.review_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(#2f3234, .9);
+  align-items: center;
+  justify-content: center;
+}
+
+.review_overlay-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100;
+  width: 40%;
+  padding: 20px 15px;
+  @include tablets {
+    width: 60%;
+  }
+  @include phones {
+    width: 90%;
+  }
+}
+
+.review_message-close {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.review_user-overlay {
+  @include gagalin ();
+  font-size: rem(14px);
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.review_text-overlay {
+  @include ubuntu ($style: light);
+  font-size: rem(14px);
+  line-height: 1.8;
+}

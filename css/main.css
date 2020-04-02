@@ -596,6 +596,13 @@ img {
   font-size: 0.875rem;
 }
 
+@media screen and (max-width: 768px) {
+  .header_links {
+    margin-right: 0.625rem;
+    margin-bottom: 0.3125rem;
+  }
+}
+
 .hero {
   background: url("../../img/pages_background/hero.jpg") center center/cover no-repeat;
   color: #fff;
@@ -617,6 +624,7 @@ img {
   .hero_content {
     flex-direction: column;
     padding: 0 15%;
+    margin-top: 3.75rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -660,7 +668,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .hero_text {
-    padding-top: 2.5rem;
+    padding-top: 1.875rem;
     margin-left: 0;
     text-align: center;
   }
@@ -705,6 +713,10 @@ img {
   margin-left: 0;
   display: flex;
   align-items: center;
+  padding: 0.5rem 0.9375rem;
+  color: white;
+  line-height: 1;
+  border: 0;
 }
 
 .clear_btn {
@@ -713,7 +725,10 @@ img {
   font-weight: 300;
   text-transform: none;
   font-size: 0.875rem;
-  line-height: 1.8;
+  line-height: 1;
+  color: white;
+  border: 0;
+  background: transparent;
 }
 
 .review_btn {
@@ -722,6 +737,11 @@ img {
 }
 .review_btn:hover {
   background: #1f2122;
+}
+@media screen and (max-width: 768px) {
+  .review_btn {
+    margin-top: 1.5625rem;
+  }
 }
 
 .section {
@@ -748,6 +768,11 @@ img {
   color: #f9b43b;
   margin-bottom: 1.25rem;
 }
+@media screen and (max-width: 768px) {
+  .hero_title {
+    margin-bottom: 1.875rem;
+  }
+}
 
 .features_title {
   color: #2f3234;
@@ -757,10 +782,33 @@ img {
   margin-top: rem-30px;
 }
 
+.burger_title {
+  margin-bottom: 2.8125rem;
+  line-height: 0.9;
+}
+@media screen and (max-width: 768px) {
+  .burger_title {
+    letter-spacing: -1px;
+  }
+}
+
 .order_title {
   color: #f9b43b;
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .order_title {
+    margin-top: -6.9375rem;
+    letter-spacing: 0.125rem;
+    margin-bottom: 0.625rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .order_title {
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 .team_title {
@@ -768,6 +816,11 @@ img {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .team_title {
+    margin-bottom: 3.125rem;
+  }
 }
 
 .scrolldown {
@@ -897,6 +950,7 @@ img {
     width: auto;
     text-align: center;
     padding: 0 20%;
+    margin-bottom: 3.125rem;
   }
 }
 
@@ -926,6 +980,7 @@ img {
 @media screen and (max-width: 768px) {
   .team_name {
     display: inline-flex;
+    font-size: 1.5625rem;
   }
 }
 
@@ -952,6 +1007,7 @@ img {
   .team_name_active + .team_content {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 
@@ -961,12 +1017,15 @@ img {
 
 .team_avatar {
   margin-right: 1.25rem;
+  width: 60%;
+  height: 60%;
 }
 @media screen and (max-width: 768px) {
   .team_avatar {
     display: inline-flex;
     justify-content: center;
     margin-right: 0;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -977,6 +1036,7 @@ img {
   line-height: 1.71;
   font-weight: 300;
   color: #ffffff;
+  margin-top: -0.625rem;
 }
 
 .team_position {
@@ -1059,6 +1119,7 @@ img {
 .reviews {
   background: black;
   height: 100vh;
+  position: relative;
 }
 
 .reviews_list {
@@ -1117,7 +1178,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 6%;
+    padding: 0 15%;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -1133,7 +1194,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .review_username {
-    margin-top: 0;
+    margin-top: 0.625rem;
     margin-bottom: 0.625rem;
   }
 }
@@ -1144,6 +1205,61 @@ img {
   font-size: 0.875rem;
   line-height: 1.8;
   margin-bottom: -0.25rem;
+}
+
+.review_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.review_overlay-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100;
+  width: 40%;
+  padding: 20px 15px;
+}
+@media screen and (max-width: 768px) {
+  .review_overlay-message {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .review_overlay-message {
+    width: 90%;
+  }
+}
+
+.review_message-close {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.review_user-overlay {
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 0.875rem;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.review_text-overlay {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.8;
 }
 
 .order {
@@ -1169,12 +1285,17 @@ img {
     padding: 0 15%;
   }
 }
+@media screen and (max-width: 480px) {
+  .order_form {
+    padding: 0;
+  }
+}
 
 .order_form-right, .order_form-left {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin-right: 1.25rem;
+  margin-top: 1.5625rem;
 }
 @media screen and (max-width: 768px) {
   .order_form-right, .order_form-left {
@@ -1182,10 +1303,30 @@ img {
   }
 }
 
+.order_form-left {
+  margin-right: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  .order_form-left {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order_form-right {
+    margin-top: 0;
+  }
+}
+
 .order_row {
-  margin-bottom: 0.875rem;
+  margin-bottom: 0.75rem;
   display: flex;
   flex-direction: row;
+}
+@media screen and (max-width: 480px) {
+  .order_row {
+    justify-content: center;
+  }
 }
 
 .order_block {
@@ -1253,6 +1394,9 @@ img {
   border-radius: 50%;
 }
 
+.order_checkbox {
+  margin-top: -0.3125rem;
+}
 .order_checkbox:before {
   content: "";
   display: inline-block;
@@ -1276,6 +1420,36 @@ img {
   background: url(../../img/icons/form_icons/rectangle_checked.png) center center no-repeat;
 }
 
+.order_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.order_overlay-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+}
+.order_overlay-message > span {
+  font-size: 0.875rem;
+  color: black;
+  margin: 0.875rem;
+}
+
+.order_btn_close {
+  margin-bottom: 0.875rem;
+}
+
 .yandex-map {
   height: 100vh;
   background: url("../../img/pages_background/map.png") center center/cover no-repeat;
@@ -1291,6 +1465,11 @@ img {
   padding: 0.625rem 5%;
   height: 4.375rem;
   color: #ffffff;
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    height: 8.75rem;
+  }
 }
 
 .footer_container {
@@ -1319,6 +1498,8 @@ img {
 @media screen and (max-width: 480px) {
   .footer_contacts {
     justify-content: center;
+    text-align: center;
+    margin-bottom: 0.875rem;
   }
 }
 
@@ -1329,6 +1510,11 @@ img {
   font-size: 0.875rem;
   line-height: 1.8;
 }
+@media screen and (max-width: 480px) {
+  .adress {
+    font-size: 1.25rem;
+  }
+}
 
 .phone {
   font-family: "Ubuntu", Helvetica, sans-serif;
@@ -1337,6 +1523,11 @@ img {
   font-size: 0.875rem;
   line-height: 1.8;
   color: #e45028;
+}
+@media screen and (max-width: 480px) {
+  .phone {
+    font-size: 1.25rem;
+  }
 }
 
 .socials_list {
@@ -1447,23 +1638,311 @@ img {
   display: none;
   transition: opacity 0.3s;
 }
-.hamburger-menu_visible {
-  display: flex;
-  opacity: 0;
-}
 
-.hamburger-menu__logo {
+.hamburger-menu_logo {
   position: absolute;
   top: 0.625rem;
   left: 1.875rem;
 }
 
-.hamburger-menu__close {
+.hamburger-menu_close {
   position: absolute;
-  right: 0.9375rem;
+  right: 1.0625rem;
   top: 0.9375rem;
-  width: 1.125rem;
-  height: 1.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
   padding: 0.9375rem;
   box-sizing: content-box;
+}
+
+.visible {
+  display: block;
+}
+
+.hamburger-menu_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 2.5rem;
+}
+
+.nav_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.nav_item::before {
+  content: "";
+  display: block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: currentColor;
+  margin-bottom: 1.25rem;
+}
+
+.nav_item:first-child::before {
+  display: none;
+}
+
+.nav_link {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 1.8;
+}
+@media screen and (max-width: 480px) {
+  .nav_link {
+    font-size: 1.5625rem;
+    font-weight: 300;
+  }
+}
+
+.slider {
+  background: linear-gradient(0deg, #f9b33b 0%, #eb8c38 50%, #f9b33b 100%);
+}
+
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.burger_container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .burger_container {
+    width: 85%;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burger_container {
+    width: 90%;
+  }
+}
+
+.burgers-list {
+  display: flex;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .burgers-list {
+    margin-top: 5%;
+  }
+}
+
+.leftarrow {
+  transform: rotate(90deg);
+  margin-right: 0.625rem;
+}
+
+.rightarrow {
+  transform: rotate(-90deg);
+  margin-left: 0.625rem;
+}
+
+.burger_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .burger_item {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 7%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burger_item {
+    padding: 0;
+  }
+}
+
+.burger_item-image, .burger_item-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .burger_item-image, .burger_item-content {
+    width: 100%;
+  }
+}
+
+.burger_pic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .burger_pic {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .burger_pic {
+    height: 250px;
+  }
+}
+
+.burger_contents {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 5.625rem;
+  height: 5.625rem;
+  background-color: #e35028;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: visible;
+}
+@media screen and (max-width: 768px) {
+  .burger_contents {
+    top: -21%;
+    left: 6%;
+  }
+}
+
+.burger_contents > span {
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+
+.burger_contents-list {
+  position: absolute;
+  top: 0;
+  right: -300%;
+  border-radius: 5px;
+  background: white;
+  opacity: 0.8;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+  padding: 0.9375rem 1.25rem;
+}
+
+.contents_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: black;
+  margin-bottom: 0.3125rem;
+  width: 100%;
+}
+
+.item-icon {
+  margin-right: 1.5625rem;
+}
+
+.item_material {
+  margin-right: 3.75rem;
+  flex: 1 1 auto;
+}
+
+.burger_calories {
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 3.75rem;
+  height: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 768px) {
+  .burger_calories {
+    bottom: 0%;
+    top: -21%;
+    left: 83%;
+  }
+}
+
+.calnumber {
+  position: absolute;
+  font-size: 1.25rem;
+}
+
+.burger_item-content {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 0.625rem;
+}
+@media screen and (max-width: 768px) {
+  .burger_item-content {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.burger_text {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.burger_price {
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 4.5rem;
+  color: #e35028;
+  letter-spacing: -1px;
+}
+
+.burger_price > span {
+  font-size: 1.875rem;
+}
+
+.order_btn_slider {
+  color: white;
+  padding: 0.5rem 0.9375rem;
+  margin-left: 2.1875rem;
 }

@@ -33,6 +33,7 @@
         width: auto;
         text-align: center;
         padding: 0 20%;
+        margin-bottom: rem(50px);
     }
 }
 
@@ -60,6 +61,7 @@
     }
     @include tablets {
         display: inline-flex;
+        font-size: rem(25px);
     }
 }
 
@@ -81,6 +83,7 @@
         @include tablets {
             flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
     }
 
@@ -92,10 +95,13 @@
 
 .team_avatar {
     margin-right: rem(20px);
+    width: 60%;
+    height: 60%;
     @include tablets {
         display: inline-flex;
         justify-content: center;
         margin-right: 0;
+        margin-bottom: rem(20px);
     }
 }
 
@@ -105,6 +111,7 @@
     line-height: 1.71;
     font-weight: 300;
     color: #ffffff;
+    margin-top: rem(-10px);
 }
 
 .team_position {

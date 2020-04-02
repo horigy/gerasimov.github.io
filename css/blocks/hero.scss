@@ -19,6 +19,7 @@
     @include tablets {
         flex-direction: column;
         padding: 0 15%;
+        margin-top: rem(60px);
     }
     @include phones {
         padding: 0 0;
@@ -52,7 +53,7 @@
     padding-top: rem(77px);
     margin-left: rem(11px);
     @include tablets {
-        padding-top: rem(40px);
+        padding-top: rem(30px);
         margin-left: 0;
         text-align: center;
     }

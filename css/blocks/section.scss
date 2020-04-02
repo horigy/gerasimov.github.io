@@ -21,7 +21,9 @@
 .hero_title {
     color: $yellow;
     margin-bottom: rem(20px);
-
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
 }
 
 .features_title {
@@ -32,10 +34,27 @@
     margin-top: (rem-30px);
 }
 
+.burger_title {
+    margin-bottom: rem(45px);
+    line-height: .9;
+    @include tablets {
+        letter-spacing: -1px;
+    }
+}
+
 .order_title {
     color: $yellow; 
     display: flex;
     justify-content: center;
+    @include tablets {
+        margin-top: rem(-111px);
+        letter-spacing: rem(2px);
+        margin-bottom: rem(10px);
+    }
+    @include phones {
+        margin-top: 0;
+        text-align: center;
+    }
 }
 
 .team_title {
@@ -43,5 +62,8 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 25px;
+    @include tablets {
+        margin-bottom: rem(50px);
+    }
 }
 

@@ -18,21 +18,41 @@
         align-items: center;
         padding: 0 15%;
     }
+    @include phones {
+        padding: 0;
+    }
 }
 .order_form-right, .order_form-left {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-right: rem(20px);
+    margin-top: rem(25px);
+    
     @include tablets {
         width: 95%;
     }
 }
 
+.order_form-left {
+    margin-right: rem(20px);
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.order_form-right {
+    @include tablets {
+        margin-top: 0;
+    }
+}
+
 .order_row {
-    margin-bottom: rem(14px);
+    margin-bottom: rem(12px);
     display: flex;
     flex-direction: row;
+    @include phones {
+        justify-content: center;
+    }
 }
 
 .order_block {
@@ -103,6 +123,7 @@
 }
 
 .order_checkbox {
+    margin-top: rem(-5px);
     &:before {
         content: "";
         display: inline-block;
@@ -125,4 +146,34 @@
             margin-right: rem(10px);
             background: url(../../img/icons/form_icons/rectangle_checked.png) center center no-repeat;
         }
+}
+
+.order_overlay {
+    display: none;
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#2f3234, .9);
+    align-items: center;
+	justify-content: center;
+}
+
+.order_overlay-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    & > span {
+        font-size: rem(14px);
+        color: black;
+        margin: rem(14px);
+    }
+}  
+
+.order_btn_close {
+    margin-bottom: rem(14px);
 }
