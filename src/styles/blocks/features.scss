@@ -1,0 +1,64 @@
+.features {
+    background: url('../images/pages_background/features_bg.jpg') center center / cover no-repeat;
+}
+
+.features_container {
+    width: 85%;
+    @include tablets {
+        width: 95%;
+    }
+}
+
+.features_list {
+    display: flex;
+    justify-content: space-between;
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.features_item {
+    width: calc(100% / 3 - 26px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: rem(20px);
+    @include phones {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+.feature_text {
+    display: flex;
+    flex-direction: column;
+    @include phones {
+        text-align: left;
+    }
+}
+
+.feature_image {
+    display: flex;
+    justify-content: center;
+    height: rem(90px);
+    margin-bottom: rem(30px);
+    @include phones {
+        width: 25%;
+        margin-right: rem(10px);
+    }
+}
+
+.feature_title {
+    @include lifehack ();
+    font-size: rem(24px);
+    margin-bottom: rem(13px);
+    color: $black;
+}
+
+.feature_content {
+    @include ubuntu ($style: light);
+    font-size: rem(14px);
+    line-height: 1.8;
+    color: rgba(47, 50, 52, 0.8);
+}

@@ -1,0 +1,74 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.section_title {
+    @include gagalin();
+    font-size: rem(72px);
+    line-height: rem(85px);
+    
+    line-height: 1;
+    @include phones {
+        font-size: rem(55px);
+        line-height: rem(60px);
+    }
+}
+
+.hero_title {
+    color: $yellow;
+    margin-bottom: rem(20px);
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+}
+
+.features_title {
+    color: $black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(20px);
+    margin-top: (rem-30px);
+}
+
+.burger_title {
+    margin-bottom: rem(45px);
+    line-height: .9;
+    @include tablets {
+        letter-spacing: -1px;
+    }
+}
+
+.order_title {
+    color: $yellow; 
+    display: flex;
+    justify-content: center;
+    @include tablets {
+        margin-top: rem(-111px);
+        letter-spacing: rem(2px);
+        margin-bottom: rem(10px);
+    }
+    @include phones {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+.team_title {
+    color: $yellow; 
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    @include tablets {
+        margin-bottom: rem(50px);
+    }
+}
+
+.wework_title {
+    font-size: rem(60px);
+    letter-spacing: 1px;
+    margin-bottom: rem(40px);
+}
+

@@ -1,0 +1,75 @@
+.hero {
+    background: url("../images/pages_background/hero.jpg") center center / cover no-repeat;
+    color: #fff;
+    position: relative;
+}
+  
+.hero_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 15%;
+        margin-top: rem(60px);
+    }
+    @include phones {
+        padding: 0 0;
+    }
+}
+
+.hero_burger, .hero_text {
+    width: 50%;
+    @include tablets {
+        width: 100%;
+        float: none;
+    }
+}
+
+.hero_burger {
+    display: flex;
+    justify-content: flex-end;
+    @include tablets {
+        justify-content: center;
+    }
+    @include phones{
+        max-height: 50%;
+    }
+}
+
+.hero_burger-pic {
+    object-fit: contain;
+}
+  
+.hero_text {
+    padding-top: rem(77px);
+    margin-left: rem(11px);
+    @include tablets {
+        padding-top: rem(30px);
+        margin-left: 0;
+        text-align: center;
+    }
+
+    @include phones {
+        padding-top: rem(20px);
+    }
+
+}
+
+.hero_desc {
+    font-size: rem(65px);
+    @include lifehack();
+    line-height: 1;
+    letter-spacing: -2px;
+    @include phones {
+        font-size: rem(45px);
+    }
+}

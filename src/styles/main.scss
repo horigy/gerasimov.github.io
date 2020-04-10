@@ -1,0 +1,37 @@
+
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+
+@import "./layouts/normalize.scss";
+
+
+@import "./layouts/media.scss";
+@import "./layouts/layout.scss";
+@import "./layouts/fonts.scss";
+
+
+
+@import "./blocks/header.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/buttons.scss";
+@import "./blocks/section.scss";
+@import "./blocks/scroll-down.scss";
+@import "./blocks/features.scss";
+@import "./blocks/team.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/form.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/fixed-menu.scss";
+@import "./blocks/hamburger.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/wework.scss";
+
+
+
+
+
