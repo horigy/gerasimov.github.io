@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.12faa133.chunk.css",
-    "main.js": "/static/js/main.1dcd3e37.chunk.js",
-    "main.js.map": "/static/js/main.1dcd3e37.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a7da1dff.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a7da1dff.js.map",
-    "static/css/2.818011ed.chunk.css": "/static/css/2.818011ed.chunk.css",
-    "static/js/2.173b1c55.chunk.js": "/static/js/2.173b1c55.chunk.js",
-    "static/js/2.173b1c55.chunk.js.map": "/static/js/2.173b1c55.chunk.js.map",
-    "static/js/3.eb9e53f9.chunk.js": "/static/js/3.eb9e53f9.chunk.js",
-    "static/js/3.eb9e53f9.chunk.js.map": "/static/js/3.eb9e53f9.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.818011ed.chunk.css.map": "/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.12faa133.chunk.css.map": "/static/css/main.12faa133.chunk.css.map",
-    "static/js/2.173b1c55.chunk.js.LICENSE.txt": "/static/js/2.173b1c55.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/polygon.69ac72c7.jpg"
+    "main.css": "./static/css/main.dabf7809.chunk.css",
+    "main.js": "./static/js/main.82223a49.chunk.js",
+    "main.js.map": "./static/js/main.82223a49.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.ae32fe54.js",
+    "runtime-main.js.map": "./static/js/runtime-main.ae32fe54.js.map",
+    "static/css/2.818011ed.chunk.css": "./static/css/2.818011ed.chunk.css",
+    "static/js/2.d55cea09.chunk.js": "./static/js/2.d55cea09.chunk.js",
+    "static/js/2.d55cea09.chunk.js.map": "./static/js/2.d55cea09.chunk.js.map",
+    "static/js/3.eb9e53f9.chunk.js": "./static/js/3.eb9e53f9.chunk.js",
+    "static/js/3.eb9e53f9.chunk.js.map": "./static/js/3.eb9e53f9.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.818011ed.chunk.css.map": "./static/css/2.818011ed.chunk.css.map",
+    "static/css/main.dabf7809.chunk.css.map": "./static/css/main.dabf7809.chunk.css.map",
+    "static/js/2.d55cea09.chunk.js.LICENSE.txt": "./static/js/2.d55cea09.chunk.js.LICENSE.txt",
+    "static/media/App.css": "./static/media/polygon.69ac72c7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a7da1dff.js",
+    "static/js/runtime-main.ae32fe54.js",
     "static/css/2.818011ed.chunk.css",
-    "static/js/2.173b1c55.chunk.js",
-    "static/css/main.12faa133.chunk.css",
-    "static/js/main.1dcd3e37.chunk.js"
+    "static/js/2.d55cea09.chunk.js",
+    "static/css/main.dabf7809.chunk.css",
+    "static/js/main.82223a49.chunk.js"
   ]
 }
